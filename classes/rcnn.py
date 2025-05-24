@@ -13,11 +13,11 @@ class Activation:
             timestep,
     ):
         """
-        Args:
-            activation map (ndarray): Map of internal activations.
-            num_activations (int): Number of activations.
-            timestep (int): Timestep of activation.
-            shannon_entropy (float): Activation entropy.
+        Initialize activation class
+
+        :param activation_map [array]: Activation map of RCNN at time t
+        :param num_activations [int]: Number of active neurons
+        :param timestep [int]: Current time step
         """
         
         self.activation_map = activation_map
@@ -28,6 +28,7 @@ class Activation:
 class RCNN:
     """
     Random-Coupled Neural Network
+    
     Reference: Liu, Haoran, Xiang, Mingrong, Liu, Mingzhe, Li, Peng, Zuo, Xue, Jiang, Xin & Zuo, Zhuo, 
                 "Random-Coupled Neural Network", Electronics (Basel) 13:21 (2024), pp. 4297-, 
                 doi:10.3390/electronics13214297.
